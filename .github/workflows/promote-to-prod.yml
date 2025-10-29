@@ -1,0 +1,92 @@
+name: Promote to Production
+
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: "Git ref to promote (default: main)"
+        required: false
+        default: "main"
+
+permissions:
+  contents: read
+
+jobs:
+  promote:
+    runs-on: ubuntu-22.04
+    env:
+      HUGO_VERSION: "0.146.0"
+      PROD_OWNER: "neurodesk"
+      PROD_REPO: "neurodesk.org"
+      PROD_BRANCH: "site"
+    steps:
+      - name: Install Hugo
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
+          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+
+      - name: Checkout (staging)
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref }}
+          submodules: recursive
+
+      - name: Set up Node and Python (optional)
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install deps (optional)
+        run: |
+          npm ci || npm install
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Build with Hugo (prod baseURL)
+        env:
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
+        run: |
+          hugo --minify --baseURL "https://neurodesk.org/"
+          echo "neurodesk.org" > public/CNAME
+
+      - name: Push built site to prod repo
+        env:
+          GH_TOKEN: ${{ secrets.PROD_REPO_TOKEN }}
+        run: |
+          set -e
+          WORK=/tmp/prod-site
+          rm -rf "$WORK"
+          mkdir -p "$WORK"
+          cd "$WORK"
+          git init
+          git config user.name "staging-promotion-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${{ env.PROD_OWNER }}/${{ env.PROD_REPO }}.git"
+          git fetch origin "${{ env.PROD_BRANCH }}" || true
+          git checkout -B "${{ env.PROD_BRANCH }}"
+          rsync -av --delete "${GITHUB_WORKSPACE}/public/" ./
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to deploy"
+            CHANGED=0
+          else
+            git commit -m "Deploy from $GITHUB_REPOSITORY@$GITHUB_SHA"
+            git push -u origin "${{ env.PROD_BRANCH }}"
+            CHANGED=1
+          fi
+
+      - name: Trigger production deploy workflow
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.PROD_REPO_TOKEN }}
+        run: |
+          # Fire repository_dispatch to prod to publish the 'site' branch content
+          curl -L -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
+            https://api.github.com/repos/${{ env.PROD_OWNER }}/${{ env.PROD_REPO }}/dispatches \
+            -d '{"event_type":"publish-site","client_payload":{}}'

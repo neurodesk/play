@@ -144,7 +144,7 @@ jobs:
             
             let previewUrl;
             if (baseRepo === 'neurodesk/neurodesk.github.io') {
-              previewUrl = `https://neurodesk.org/pr-${prNumber}/`;
+              previewUrl = `https://neurodesk.github.io/pr-${prNumber}/`;
             } else {
               previewUrl = `https://${baseOwner}.github.io/${baseName}/pr-${prNumber}/`;
             }

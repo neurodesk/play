@@ -71,10 +71,10 @@ jobs:
           HUGO_ENV: production
         run: |
           if [[ "${{ github.repository }}" == "neurodesk/neurodesk.github.io" ]]; then
-            echo "Building for production domain: https://neurodesk.org/"
+            echo "Building for staging domain: https://neurodesk.github.io/"
             hugo \
               --minify \
-              --baseURL "https://neurodesk.org/"
+              --baseURL "https://neurodesk.github.io/"
           else
             # Temporary fix for css paths in forks
             sed -i "s|canonifyURLs=true|canonifyURLs=false|g" config.toml
@@ -139,11 +139,7 @@ jobs:
             sed -i 's/OLD/NEW/' content/en/Getting-Started/Local/neurodeskapp.md
           fi
       
-      - name: Add custom domain (main repo only)
-        run: |
-          if [[ "$GITHUB_REPOSITORY" == "neurodesk/neurodesk.github.io" ]]; then
-            cp ./static/CNAME ./public/CNAME
-          fi
+      # Note: Do NOT copy the production CNAME during staging deploys.
 
       - name: Merge PR previews into artifact (preserve pr-* directories)
         run: |
