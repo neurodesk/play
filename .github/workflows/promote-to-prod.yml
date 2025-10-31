@@ -91,16 +91,22 @@ jobs:
           # Build it (same as deploy.yaml)
           cd /tmp/neurocontainers-ui
           bun install
-          PAGES_BASE_PATH="/neurocontainers-ui/" bun run build
-          
-          # Copy built output to public/neurocontainers-ui/
-          cp -r out/* "$UI_DIR/" || true
-          
+          # NOTE: Next.js expects basePath without a trailing slash
+          PAGES_BASE_PATH="/neurocontainers-ui" bun run build
+
+          # Show built out/ contents for debugging
+          echo "Built output (out/):"
+          ls -la out || true
+
+          # Copy built output to public/neurocontainers-ui/ (use rsync to be robust)
+          rsync -av --delete out/ "$UI_DIR/"
+
           # Verify files
           if [ -f "$UI_DIR/index.html" ]; then
             echo "✓ neurocontainers-ui built and copied successfully"
           else
             echo "⚠ Warning: neurocontainers-ui build failed or output not found"
+            ls -la "$UI_DIR" || true
             exit 1
           fi
 
