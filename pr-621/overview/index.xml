@@ -192,7 +192,7 @@ Renton, A.I., Dao, T.T., Johnstone, T., Civier, O., Sullivan, R. P., White, D. J
  &lt;/tbody>
 &lt;/table>
 &lt;h2 id="neurodesk-app-download-metrics">Neurodesk App download metrics&lt;/h2>
-&lt;p>&amp;lt;img src=&amp;quot;{{ &amp;ldquo;/static/docs/overview/neurodeskapp_metrics.png&amp;rdquo; | relURL }}&amp;quot; width=&amp;ldquo;95%&amp;quot;&amp;gt;&lt;/p>
+&lt;img src="https://neurodesk.github.io/pr-621/static/docs/overview/neurodeskapp_metrics.png" width="95%">
 &lt;h2 id="user-metrics">User metrics&lt;/h2>
 &lt;iframe src="https://lookerstudio.google.com/embed/reporting/1b5d3da0-7a67-4440-bc3c-95bd6fd94f18/page/2VKTD" frameborder="0" style="border:0">&lt;/iframe>
 &lt;h2 id="uptime-metrics">Uptime metrics&lt;/h2>

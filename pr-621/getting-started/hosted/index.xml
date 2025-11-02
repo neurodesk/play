@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hosted on Neurodesk</title><link>https://neurodesk.github.io/pr-621/getting-started/hosted/</link><description>Recent content in Hosted on Neurodesk</description><generator>Hugo</generator><language>en</language><atom:link href="https://neurodesk.github.io/pr-621/getting-started/hosted/index.xml" rel="self" type="application/rss+xml"/><item><title>Github Codespaces</title><link>https://neurodesk.github.io/pr-621/getting-started/hosted/github/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.github.io/pr-621/getting-started/hosted/github/</guid><description>&lt;p>Start a GitHub Codespace in the repository of your choice:
 &lt;/br>
-&amp;lt;img src=&amp;quot;{{ &amp;ldquo;/static/docs/getting-started/hosted/github_codespace.png&amp;rdquo; | relURL }}&amp;quot; alt=&amp;ldquo;Start GitHub Codespace&amp;rdquo; width=&amp;ldquo;500&amp;rdquo;&amp;gt;&lt;/p>
+&lt;img src="https://neurodesk.github.io/pr-621/static/docs/getting-started/hosted/github_codespace.png" alt="Start GitHub Codespace" width="500">&lt;/p>
 &lt;p>Then start the neurodesktop container in a terminal:&lt;/p>
 
 
@@ -16,7 +16,10 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0a3069">&lt;/span> -e &lt;span style="color:#953800">NEURODESKTOP_VERSION&lt;/span>&lt;span style="color:#0550ae">=&lt;/span>2025-06-10 ghcr.io/neurodesk/neurodesktop/neurodesktop:2025-06-10&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>&lt;p>Then open Neurodesktop in the browser by clicking the &amp;ldquo;Open in Browser&amp;rdquo; Button displayed
 &lt;/br>
-&amp;lt;img src=&amp;quot;{{ &amp;ldquo;/static/docs/getting-started/hosted/github_codespace_open.png&amp;rdquo; | relURL }}&amp;quot; alt=&amp;ldquo;Pop up on GitHub Codespace&amp;rdquo; width=&amp;ldquo;400&amp;rdquo;&amp;gt;&lt;/p></description></item><item><title>Bunya</title><link>https://neurodesk.github.io/pr-621/getting-started/hosted/bunya/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.github.io/pr-621/getting-started/hosted/bunya/</guid><description>&lt;!-- markdown-link-check-disable -->
+&lt;img src="https://neurodesk.github.io/pr-621/static/docs/getting-started/hosted/github_codespace_open.png" alt="Pop up on GitHub Codespace" width="400">&lt;/p>
+&lt;p>The token for authentication is displayed in the terminal:
+&lt;img src="https://neurodesk.github.io/pr-621/static/docs/getting-started/hosted/ghc_terminal.png" alt="alt text"/>
+&lt;/p></description></item><item><title>Bunya</title><link>https://neurodesk.github.io/pr-621/getting-started/hosted/bunya/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.github.io/pr-621/getting-started/hosted/bunya/</guid><description>&lt;!-- markdown-link-check-disable -->
 &lt;p>Neurodesk is installed at the University of Queensland&amp;rsquo;s supercomputer &amp;ldquo;Bunya&amp;rdquo;. To access neurodesk tools you need to be in an interactive job (so either start a virtual desktop via Open On-Demand: &lt;a href="https://bunya-ondemand.rcc.uq.edu.au/pun/sys/dashboard" target="_blank" rel="noopener">https://bunya-ondemand.rcc.uq.edu.au/pun/sys/dashboard&lt;/a>) or run:&lt;/p>
 
 

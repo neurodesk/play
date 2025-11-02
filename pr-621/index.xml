@@ -126,7 +126,7 @@ Twitter: &lt;a href="https://twitter.com/sbollmann_MRI" target="_blank" rel="noo
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#cf222e">export&lt;/span> APPTAINERENV_SUBJECTS_DIR&lt;span style="color:#0550ae">=$&lt;/span>SUBJECTS_DIR&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>&lt;p>Run Recon all pipeline:&lt;/p></description></item><item><title>Github Codespaces</title><link>https://neurodesk.github.io/pr-621/getting-started/hosted/github/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.github.io/pr-621/getting-started/hosted/github/</guid><description>&lt;p>Start a GitHub Codespace in the repository of your choice:
 &lt;/br>
-&amp;lt;img src=&amp;quot;{{ &amp;ldquo;/static/docs/getting-started/hosted/github_codespace.png&amp;rdquo; | relURL }}&amp;quot; alt=&amp;ldquo;Start GitHub Codespace&amp;rdquo; width=&amp;ldquo;500&amp;rdquo;&amp;gt;&lt;/p>
+&lt;img src="https://neurodesk.github.io/pr-621/static/docs/getting-started/hosted/github_codespace.png" alt="Start GitHub Codespace" width="500">&lt;/p>
 &lt;p>Then start the neurodesktop container in a terminal:&lt;/p>
 
 
@@ -142,7 +142,10 @@ Twitter: &lt;a href="https://twitter.com/sbollmann_MRI" target="_blank" rel="noo
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#0a3069">&lt;/span> -e &lt;span style="color:#953800">NEURODESKTOP_VERSION&lt;/span>&lt;span style="color:#0550ae">=&lt;/span>2025-06-10 ghcr.io/neurodesk/neurodesktop/neurodesktop:2025-06-10&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;/div>&lt;p>Then open Neurodesktop in the browser by clicking the &amp;ldquo;Open in Browser&amp;rdquo; Button displayed
 &lt;/br>
-&amp;lt;img src=&amp;quot;{{ &amp;ldquo;/static/docs/getting-started/hosted/github_codespace_open.png&amp;rdquo; | relURL }}&amp;quot; alt=&amp;ldquo;Pop up on GitHub Codespace&amp;rdquo; width=&amp;ldquo;400&amp;rdquo;&amp;gt;&lt;/p></description></item><item><title>Indexing with Algolia</title><link>https://neurodesk.github.io/pr-621/developers/documentation/algolia-indexing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.github.io/pr-621/developers/documentation/algolia-indexing/</guid><description>&lt;h2 id="1-prerequisites">1. Prerequisites&lt;/h2>
+&lt;img src="https://neurodesk.github.io/pr-621/static/docs/getting-started/hosted/github_codespace_open.png" alt="Pop up on GitHub Codespace" width="400">&lt;/p>
+&lt;p>The token for authentication is displayed in the terminal:
+&lt;img src="https://neurodesk.github.io/pr-621/static/docs/getting-started/hosted/ghc_terminal.png" alt="alt text"/>
+&lt;/p></description></item><item><title>Indexing with Algolia</title><link>https://neurodesk.github.io/pr-621/developers/documentation/algolia-indexing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.github.io/pr-621/developers/documentation/algolia-indexing/</guid><description>&lt;h2 id="1-prerequisites">1. Prerequisites&lt;/h2>
 &lt;ul>
 &lt;li>&lt;a href="https://www.algolia.com/" target="_blank" rel="noopener">Algolia account&lt;/a>&lt;/li>
 &lt;/ul>
@@ -339,13 +342,21 @@ Email: &lt;a href="mailto:orenciv@gmail.com">orenciv@gmail.com&lt;/a>&lt;/p>&lt;
 &lt;/div>
 
 &lt;h2 id="starting-neurodesk">Starting Neurodesk&lt;/h2>
-&lt;p>After starting Neurodesk, a JupyterLab instance should open. You can either work from here or open a desktop environment by clicking &lt;code>Neurodesktop&lt;/code> under &lt;code>Notebooks&lt;/code>. This tutorial uses the desktop.&lt;/p></description></item><item><title>Neurodesk App</title><link>https://neurodesk.github.io/pr-621/getting-started/local/neurodeskapp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.github.io/pr-621/getting-started/local/neurodeskapp/</guid><description>&lt;p>&amp;lt;img style=&amp;ldquo;float: right;&amp;rdquo; src=&amp;quot;{{ &amp;ldquo;/static/docs/getting-started/neurodeskapp/neurodesk-desktop.png&amp;rdquo; | relURL }}&amp;quot; width=&amp;ldquo;750&amp;rdquo;&amp;gt;&lt;/p>
+&lt;p>After starting Neurodesk, a JupyterLab instance should open. You can either work from here or open a desktop environment by clicking &lt;code>Neurodesktop&lt;/code> under &lt;code>Notebooks&lt;/code>. This tutorial uses the desktop.&lt;/p></description></item><item><title>Neurodesk App</title><link>https://neurodesk.github.io/pr-621/getting-started/local/neurodeskapp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.github.io/pr-621/getting-started/local/neurodeskapp/</guid><description>&lt;img style="float: right;" src="https://neurodesk.github.io/pr-621/static/docs/getting-started/neurodeskapp/neurodesk-desktop.png" width="750">
 &lt;!-- ![Neurodesk App](/static/docs/getting-started/neurodeskapp/neurodesk-desktop.png 'neurodeskapp') -->
 &lt;h3 id="determine-system-privileges">Determine System Privileges&lt;/h3>
 &lt;p>Before running the app, check whether your system has privileged access (root/admin permissions). This determines which engine you need to use to run the app:&lt;/p>
 &lt;p>If you have privileged access → Use Docker or Podman Engine&lt;/p>
 &lt;p>If you do NOT have privileged access → Use TinyRange Engine, or run remote instance&lt;/p>
-&lt;p>&amp;lt;img src=&amp;quot;{{ &amp;ldquo;/static/docs/getting-started/neurodeskapp/engine-options.png&amp;rdquo; | relURL }}&amp;quot; width=&amp;ldquo;400&amp;rdquo;&amp;gt;&lt;/p></description></item><item><title>Neurodesk Architecture</title><link>https://neurodesk.github.io/pr-621/developers/architecture/neurodesk-components/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.github.io/pr-621/developers/architecture/neurodesk-components/</guid><description>&lt;p>&lt;img src="https://neurodesk.github.io/pr-621/static/developers/architecture/neurodesk-components/NeurodeskArchitecture.png" alt="architecture" title="architecture"/>
+&lt;img src="https://neurodesk.github.io/pr-621/static/docs/getting-started/neurodeskapp/engine-options.png" width="400">
+&lt;h3 id="minimum-system-requirements">Minimum System Requirements&lt;/h3>
+&lt;ol>
+&lt;li>At least 5GB free space for neurodesktop base image.&lt;/li>
+&lt;li>One of the following options, depending on system privileges:&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>
+&lt;p>With privileged access: Docker or Podman to run respective engines&lt;/p></description></item><item><title>Neurodesk Architecture</title><link>https://neurodesk.github.io/pr-621/developers/architecture/neurodesk-components/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://neurodesk.github.io/pr-621/developers/architecture/neurodesk-components/</guid><description>&lt;p>&lt;img src="https://neurodesk.github.io/pr-621/static/developers/architecture/neurodesk-components/NeurodeskArchitecture.png" alt="architecture" title="architecture"/>
 &lt;/p>
 &lt;h2 id="neurodesktop-recommended-for-beginners">Neurodesktop: Recommended for Beginners&lt;/h2>
 &lt;p>&lt;em>Neurodesktop&lt;/em> is a compact Docker container with a browser-accessible virtual desktop that allows you develop and implement data analysis, pre-equipped with basic fMRI and EEG analysis tools.
@@ -1251,7 +1262,7 @@ Install the following VS Code extensions:&lt;/p>
  &lt;/tbody>
 &lt;/table>
 &lt;h2 id="neurodesk-app-download-metrics">Neurodesk App download metrics&lt;/h2>
-&lt;p>&amp;lt;img src=&amp;quot;{{ &amp;ldquo;/static/docs/overview/neurodeskapp_metrics.png&amp;rdquo; | relURL }}&amp;quot; width=&amp;ldquo;95%&amp;quot;&amp;gt;&lt;/p>
+&lt;img src="https://neurodesk.github.io/pr-621/static/docs/overview/neurodeskapp_metrics.png" width="95%">
 &lt;h2 id="user-metrics">User metrics&lt;/h2>
 &lt;iframe src="https://lookerstudio.google.com/embed/reporting/1b5d3da0-7a67-4440-bc3c-95bd6fd94f18/page/2VKTD" frameborder="0" style="border:0">&lt;/iframe>
 &lt;h2 id="uptime-metrics">Uptime metrics&lt;/h2>
