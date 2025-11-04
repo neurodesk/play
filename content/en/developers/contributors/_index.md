@@ -113,6 +113,22 @@ We try to update this page based on the git commit history:
 - Language models
 - Container building
 
+## **Akshit Beniwal** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/akshitbeniwal" target="_blank" rel="noopener noreferrer">akshitbeniwal</a>
+### The University of Queensland, Australia
+
+- cloud infrastructure and testing
+
+## **Kyle Mapue** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/kylemaps" target="_blank" rel="noopener noreferrer">kylemaps</a>
+### The University of Queensland, Australia
+
+- cloud infrastructure
+
+## **Edan Hamilton** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/Edan-Hamilton" target="_blank" rel="noopener noreferrer">Edan-Hamilton</a>
+### The University of Queensland, Australia
+
+- cloud infrastructure
+- cyber security
+
 ## **Angela Renton** - <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="25" alt="GitHub logo"> <a href="https://github.com/air2310" target="_blank" rel="noopener noreferrer">air2310</a>
 ### University of Queensland, Australia \ École Polytechnique Fédérale de Lausanne, Switzerland \ Université de Genèvre, Switzerland
 
