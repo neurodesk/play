@@ -252,6 +252,16 @@ If it still does not work, please report the problem and we will do our best to 
 
 ## **Docker, WSL, Memory**
 ### Docker
+
+#### Docker: Neurodesktop image doesn't start and fails with out of memory or CVMFS exceptions
+The reason could be that the Docker Disk is full. Check that this is not the case:
+<img width="664" height="54" alt="image" src="https://github.com/user-attachments/assets/04673cd2-a940-48d7-9002-fb56b527c0f7" />
+
+and expand in the settings:
+<img width="821" height="697" alt="image" src="https://github.com/user-attachments/assets/51c60c80-f203-45dc-9c27-1fb941cd3800" />
+
+
+
 #### Docker: Shows an error that unprivileged user namespaces are not enabled.
 This can be activated by running
 ```
