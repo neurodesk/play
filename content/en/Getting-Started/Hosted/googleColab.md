@@ -10,12 +10,6 @@ description: >
   Neurodesk Singularity Containers for Google Colab
 ---
 
-
-
-{{< alert color="warning">}}
-WARNING: Google disabled a crucial feature necessary for running containers, and Neurodesk containers currently do not run on Google Colab.
-{{< /alert >}}
-
 Open a notebook in Google Colab and run the following commands to set up the Neurodesk environment:
 
 ```python
@@ -32,7 +26,7 @@ os.environ["LMOD_CMD"] = "/usr/share/lmod/lmod/libexec/lmod"
 os.environ["MODULEPATH"] = ':'.join(map(str, list(map(lambda x: os.path.join(os.path.abspath('/cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/'), x),os.listdir('/cvmfs/neurodesk.ardc.edu.au/neurodesk-modules/')))))
 ```
 
-Once this setup is completed you can list the available Neurodesk applications like this:
+Once this setup is completed, you can list the available Neurodesk applications like this:
 ```python
 import lmod
 await lmod.avail()
