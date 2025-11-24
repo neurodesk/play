@@ -9,6 +9,7 @@ aliveStatusCodes:
   - 200
   - 201
   - 204
+  - 403
 replacementPatterns:
   - pattern: "^/"
     replacement: "https://neurodesk.org/"
