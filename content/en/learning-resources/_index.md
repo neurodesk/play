@@ -13,7 +13,9 @@ description: >
 
 ---
 
-![tutorials VS examples](/static/learning-resources/neurodesk_tutorials_vs_examples.png 'tutorials VS examples')
+<div style="max-width: 900px; margin-left: 0;">
+    <img src="{{< relurl "/static/learning-resources/neurodesk_tutorials_vs_examples.png" >}}" alt="tutorials VS examples" style="width: 100%; height: auto;">
+  </div>
 
   Neurodesk offers two types of learning resources to help you get started with neuroimaging analysis: 
   
