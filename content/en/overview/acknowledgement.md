@@ -27,19 +27,15 @@ This work is supported by the **Wellcome Trust** with a Discretionary Award as p
 </div>
 
 
+<br/> <br/> 
 This project is also supported by the **Australian Research Data Commons (ARDC)** via the **AEDAPT platform project**:  
 *Australian Electrophysiology Data Analytics Platform.*
 
 <img src="https://user-images.githubusercontent.com/4021595/119062104-3caf4400-ba19-11eb-8211-e2e9ce831a16.png" width="250">
 
-<div style="display:flex; gap:30px; flex-wrap:wrap; align-items:center; margin: 10px 0;">
-  <img src="{{< relurl "/static/docs/overview/nif.png" >}}" width="120" alt="NIF">
-  <img src="{{< relurl "/static/docs/overview/uq_logo.png" >}}" width="120" alt="UQ">
-  <img src="{{< relurl "/static/docs/overview/swinburne_uni_logo.png" >}}" width="120" alt="Swinburne">
-  <img src="{{< relurl "/static/docs/overview/liege_uni_logo.png" >}}" width="120" alt="Liege">
-</div>
 
-This project is also supported by the **Australian National Imaging Facility (NIF)** via the **Foundational Digital Research Infrastructure Project**:  
+<br/> <br/> 
+This project is supported by the **Australian National Imaging Facility (NIF)** via the **Foundational Digital Research Infrastructure Project**:  
 
 <div style="display:flex; gap:30px; flex-wrap:wrap; align-items:center; margin: 10px 0;">
   <img src="{{< relurl "/static/docs/overview/nif.png" >}}" width="120" alt="NIF">
@@ -62,7 +58,7 @@ This work benefits from services and infrastructure provided by:
   <img src="{{< relurl "/static/docs/overview/indiana_university_logo.jpeg" >}}" width="100">
 </div>
 
-
+<br/> 
 We are also grateful for:
 
 - **AWS Cloud Credits** (providing cloud credits since 2024)
