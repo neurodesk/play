@@ -13,7 +13,7 @@ description: >
 
 ---
 
-![tutorials VS examples](/static/learning-resources/neurodesk_tutorials_vs_examples.png 'tutorials VS examplesu')
+![tutorials VS examples](/static/learning-resources/neurodesk_tutorials_vs_examples.png 'tutorials VS examples')
 
   Neurodesk offers two types of learning resources to help you get started with neuroimaging analysis: 
   
