@@ -13,7 +13,7 @@ description: >
 
 We welcome tutorials that walk users through using tools or workflows available in Neurodesk. These tutorials are valuable learning resources that support accessible, reproducible neuroimaging.
 
-Tutorials are written in Markdown and hosted in the [`neurodesk.github.io:tutorials`](https://github.com/Neurodesk/neurodesk.github.io/tree/main/content/en/tutorials-examples/tutorials) repository, where they appear as part of the documentation site.
+Tutorials are written in Markdown and hosted in the [`neurodesk.github.io:tutorials`](https://github.com/neurodesk/neurodesk.github.io/tree/main/content/en/learning-resources/tutorials) repository, where they appear as part of the documentation site.
 
 ---
 
@@ -48,7 +48,7 @@ Follow the steps for [contributing content to Neurodesk.org](/developers/documen
 
 1. Place your completed `.md` file in the appropriate subfolder under:
 
-   [`/content/en/tutorials-examples/tutorials/`](https://github.com/neurodesk/neurodesk.github.io/tree/main/content/en/tutorials-examples/tutorials)
+   [`/content/en/tutorials-examples/tutorials/`](https://github.com/neurodesk/neurodesk.github.io/tree/main/content/en/learning-resources/tutorials)
 
 2. Store any images in a matching subfolder in `/static/learning-resources/tutorials/`
 

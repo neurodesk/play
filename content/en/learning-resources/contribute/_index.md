@@ -30,7 +30,7 @@ To contribute a new tutorial or example notebook:
 
 3. **Save your content**  
    - For **tutorials**: add your Markdown file to the 
-     [Github neurodesk.github.io: tutorials folder](https://github.com/neurodesk/neurodesk.github.io/tree/main/content/en/tutorials-examples/tutorials)
+     [Github neurodesk.github.io: tutorials folder](https://github.com/neurodesk/neurodesk.github.io/tree/main/content/en/learning-resources/tutorials)
 
    - For **example notebooks**: add your `.ipynb` file to the 
      [Github example-notebooks: books folder](https://github.com/Neurodesk/example-notebooks/tree/main/books)
