@@ -27,6 +27,8 @@ For instructions on how to cite Neurodesk and specific tools, visit our [Citatio
 
 ## Neurodesk in action
 
+- Ribeiro, F. L., Satzger, R., Hoffstaedter, F., Bürger, C., Herholz, P., Linhardt, D., Benson, N. C., Schwarzkopf, D. S., Puckett, A. M., Bollmann, S., & Hebart, M. N. (2025). Predicting functional topography of the human visual cortex from cortical anatomy at scale. bioRxiv. https://doi.org/10.1101/2025.11.27.690210
+
 - Clements, G. M., Camacho, P., Bowie, D. C., Low, K. A., Sutton, B. P., Gratton, G., & Fabiani, M. (2025). Effects of Aging, Estimated Fitness, and Cerebrovascular Status on White Matter Microstructural Health. Hum Brain Mapp, 46(5), e70168. https://doi.org/10.1002/hbm.70168 
 
 - Essex, C. A., Merenstein, J. L., Overson, D. K., Truong, T. K., Madden, D. J., Bedggood, M. J., Murray, H., Holdsworth, S. J., Stewart, A. W., Morgan, C., Faull, R. L. M., Hume, P., Theadom, A., & Pedersen, M. (2025). Characterizing positive and negative quantitative susceptibility values in the cortex following mild traumatic brain injury: a depth- and curvature-based study. Cereb Cortex, 35(3). https://doi.org/10.1093/cercor/bhaf059
