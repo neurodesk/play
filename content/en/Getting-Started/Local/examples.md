@@ -229,7 +229,7 @@ EOL
 
 make sure you have set the APPTAINER_BINDPATH to all directories that you want the containers to access
 ```
-export APPTAINER_BINDPATH=`/data,/scratch`
+export APPTAINER_BINDPATH='/data,/scratch'
 ```
 you can also add this to your ~/.bashrc
 
