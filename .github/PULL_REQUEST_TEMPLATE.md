@@ -10,6 +10,6 @@ It may take a few minutes after the build succeeds for the PR preview to become 
 
 ## Contact / help
 
-If you need help or access, contact one of the code owners: @aswinnarayanan @iishiishii @micmas @kylemaps
+If you need help or access, contact one of the code owners: @neurodesk/website-team
 
 Thank you — this helps reviewers know your PR is ready and reduces churn during review.
