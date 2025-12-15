@@ -206,7 +206,7 @@ enable = false
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
 [[params.links.developer]]
 	name = "Metrics"
-	url = "/docs/overview/metrics"
+	url = "https://neurodesk.org/docs/overview/metrics"
 	icon = "fa fa-signal"
     desc = "Metrics"
 #[[params.links.developer]]
@@ -226,15 +226,36 @@ enable = false
     desc = "Uptime"
 [[params.links.user]]
 	name = "Acknowledgements"
-	url = "/overview/acknowledgement/"
+	url = "https://neurodesk.org/overview/acknowledgement/"
  	icon = "fa fa-handshake"
     desc = "Acknowledgements support and fundings for the project"
 
 [[menu.main]]
-    name = "GitHub"
+    name = "Overview"
+    weight = 10
+    url = "https://neurodesk.org/overview/"
+
+[[menu.main]]
+    name = "Getting Started"
+    weight = 20
+    url = "https://neurodesk.org/getting-started/"
+[[menu.main]]
+    name = "Learning Resources"
+    weight = 30
+    url = "https://neurodesk.org/learning-resources/"
+[[menu.main]]
+    name = "Developer Documentation"
     weight = 40
+    url = "https://neurodesk.org/developers/"
+[[menu.main]]
+    name = "GitHub"
+    weight = 50
     url = "https://github.com/neurodesk"
-	
+[[menu.main]]
+    name = "Contact"
+    weight = 60
+    url = "https://neurodesk.org/contact/"
+
 [module]
 proxy = "direct"
 [[module.imports]]
