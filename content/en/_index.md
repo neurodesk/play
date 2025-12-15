@@ -17,7 +17,7 @@ This service allows you to:
 - Try out the platform before setting up a local installation.
 - Collaborate with colleagues using a consistent environment.
 
-> **Note:** Neurodesk Play is free but comes with resource limits. For more intensive workloads, consider [installing Neurodesk locally](/docs/getting-started/local/) or using one of our [other hosting options](/docs/getting-started/hosted/).
+> **Note:** Neurodesk Play is free but comes with resource limits. For more intensive workloads, consider [installing Neurodesk locally](https://neurodesk.org/docs/getting-started/local/) or using one of our [other hosting options](https://neurodesk.org/docs/getting-started/hosted/).
 
 ## Launch Neurodesk Play
 The tool below automatically detects the fastest server for your location. Click the **Recommended** card to start.
@@ -130,7 +130,7 @@ runPingTest();
 
 ## Data Transfer
 We provide several methods to transfer your files in and out of Neurodesk Play, including drag-and-drop and cloud storage integration. 
-[View Data Transfer Documentation &rarr;](/docs/neurodesktop/storage)
+[View Data Transfer Documentation &rarr;](https://neurodesk.org/docs/neurodesktop/storage)
 
 ## Usage Acknowledgments
 
