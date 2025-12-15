@@ -1,214 +1,148 @@
 ---
-title: Neurodesk
-linktitle: Neurodesk
+title: Neurodesk Play
+linktitle: Neurodesk Play
 type: landing
 ---
 
-<section class="row td-box -bg-secondary justify-content-left h-auto col-big-desktop">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-8 order-md-1 text-center">
-                <h1 class="mt-0 mt-md-5 pb-2">Enabling Reproducible Neuroimaging Analysis</h1>
-                <h2>Your platform for flexible, scalable, accessible research​</h2>
-                <div class="mt-4 mb-5">
-                    <div class="row g-4 justify-content-center">
-						<div class="col-10 col-sm-6">
-							<a class="btn btn-lg btn-light w-100 p-3" href="{{< relurl "/overview/faq/#what-is-neurodesk" >}}">
-                                <i class="fa fa-question-circle"></i> Neurodesk FAQ
-                            </a>
-                        </div>
-                        <div class="col-10 col-sm-6">
-                            <a class="btn btn-lg btn-light w-100 p-3" href="https://neurodesk.org/example-notebooks/intro.html">
-                                <i class="fa fa-book"></i> See Examples
-                            </a>
-                        </div>
-						<div class="col-10 col-sm-6">
-							<a class="btn btn-lg btn-light w-100 p-3" href="{{< relurl "/getting-started/local/neurodeskapp/" >}}">
-                                <i class="fa fa-laptop"></i> Use Locally
-                            </a>
-                        </div>
-						<div class="col-10 col-sm-6">
-							<a class="btn btn-lg btn-light w-100 p-3" href="{{< relurl "/getting-started/hosted" >}}">
-                                <i class="fa fa-cloud"></i> Use Hosted
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-			<div class="col-md-4 order-md-2 text-center">
-				<img src="{{< relurl "/static/favicons/neurodesk-logo.svg" >}}" style="height:350px; max-width:100%;" alt="Neurodesk logo" />
-			</div>
-        </div>
-    </div>
-</section>
+{{% blocks/section color="light" %}}
 
+# Neurodesk Play
 
-<section class="container-fluid">
-	<div class="row justify-content-center">
-		<div class="col-12 text-center">
-			<h1 class="mt-0 mt-md-5 pb-4">Neurodesk brings neuroimaging analyses in notebooks and virtual desktops</h1>
-			<div class="position-relative" style="max-width: 1200px; margin: 0 auto;">
-				<div style="padding-top: 56.25%; position: relative;">
-					<img src="{{< relurl "/static/favicons/neurodesk.jpeg" >}}"
-						class="w-100 h-100 position-absolute top-0 start-0 object-fit-contain"
-						style="z-index: 1;"
-						alt="Neurodesk overview placeholder">
-					<video class="w-100 h-100 position-absolute top-0 start-0 object-fit-contain"
-						style="z-index: 2;"
-						autoplay muted loop
-						onloadstart="this.previousElementSibling.style.display='none';">
-						<source src="{{< relurl "/static/favicons/neurodesk.webm" >}}" type="video/webm">
-						<source src="{{< relurl "/static/favicons/neurodesk.mp4" >}}" type="video/mp4">
-						Your browser does not support the video tag.
-					</video>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+Neurodesk Play is a publicly available service for accessing Neurodesk directly through your web browser without any setup
 
+This service allows you to:
 
+- Start using Neurodesk immediately without any installation.
+- Access a wide range of pre-installed neuroimaging tools.
+- Try out the platform before setting up a local installation.
+- Collaborate with colleagues using a consistent environment.
 
-<section
-  id="startup"
-  class="row -bg-light justify-content-left h-auto col-big-desktop"
-	style="
-		background-image: url('{{< relurl "/static/favicons/background-bottom.svg" >}}');
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    background-size: 100% auto;">
-	<div class="td-box">
-		<h2>Neurodesk Components</h2>
-		<p class="lead mt-2">Details of each component within the Neurodesk project.<br /> Neurodesk makes it easy for
-			beginners and experts to use neuroimaging tools for desktop, hpc, web, and cloud.</p>
-	</div>
-	<div class="component-start container-fluid py-3">
-		<div class="row">
-			<div class="col-12 col-xl-11 component-col">
-				<div class="row justify-content-center">
-					<div class="col-10 col-md-4 col-lg-4 mb-4">
-						<div class="component-card shadow-sm desktop">
-							<a class="component-click-btn d-flex flex-column" href="{{< relurl "/getting-started/neurodesktop/" >}}">
-								<div class="card-body">
-										<i class="fa fa-window-maximize"></i>
-									<h4 class="mt-2">Neurodesktop</h4>
-									<p class="card-summary">Fully featured desktop in a container</p>
-								</div>
-								<div class="image-wrapper mt-2">
-									<img src="{{< relurl "/static/favicons/neurodesktop.png" >}}" alt="Neurodesktop" class="img-fluid shadow-sm" />
-								</div>
-							</a>
-						</div>
-					</div>
-					<div class="col-10 col-md-4 col-lg-4 mb-4">
-						<div class="component-card shadow-sm containers">
-							<a class="component-click-btn d-flex flex-column" href="{{< relurl "/getting-started/neurocontainers/" >}}">
-								<div class="card-body">
-									<i class="fas fa-layer-group"></i>
-									<h4>Neurocontainers</h4>
-									<p class="card-summary">Software container library</p>
-								</div>
-								<div class="image-wrapper mt-auto">
-									<img src="{{< relurl "/static/favicons/neurocontainer.png" >}}" alt="neurocontainer" class="img-fluid" />
-								</div>
-							</a>
-						</div>
-					</div>
-					<div class="col-10 col-md-4 col-lg-4 mb-4">
-						<div class="component-card shadow-sm command">
-							<a class="component-click-btn d-flex flex-column" href="{{< relurl "/getting-started/neurocommand/" >}}">
-								<div class="card-body">
-									<i class="fas fa-terminal"></i>
-									<h4>Neurocommand</h4>
-									<p class="card-summary">Core installer</p>
-								</div>
-								<div class="image-wrapper mt-auto">
-									<img class="neurocommand img-fluid" src="{{< relurl "/static/favicons/neurocommand.png" >}}"
-										alt="Neurocommand" />
-									<div class="fake">
-										<div class=fakeMenu>
-											<div class="fakeButtons fakeClose"></div>
-											<div class="fakeButtons fakeMinimize"></div>
-											<div class="fakeButtons fakeZoom"></div>
-										</div>
-										<div class="fakeScreen">
-											<span class="typewriter type" style="--n:53">$ pip3 install -r
-												neurodesk/requirements.txt --user</br />
-												$ bash build.sh --cli</br />
-												$ bash containers.sh</br />
-												$ module use $PWD/local/containers/modules
-											</span>
-										</div>
-									</div>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+> **Note:** Neurodesk Play is free but comes with resource limits. For more intensive workloads, consider [installing Neurodesk locally](/docs/getting-started/local/) or using one of our [other hosting options](/docs/getting-started/hosted/).
 
-<section class="row -bg-secondary justify-content-left h-auto col-big-desktop">
-	<div class="container-fluid community-start">
-		<div class="row">
-			<div class="col-10 col-sm-9 col-md-10 col-lg-3 col-xl-2 community-title">
-				<h2>Community</h2>
-				<h3>Neurodesk is a community project.</h3>
-				<p class="lead mt-2">Our active community provides transparency and inclusion. We encourage you to
-					engage and contribute.</p>
-			</div>
-			<div class="col-11 col-sm-11 col-md-10 col-lg-7 col-xl-8 community-col">
-				<div class="row community">
-					<div class="col-6 col-md-5 col-lg-6 col-xl-3">
-						<div class="card community-card">
-							<a href="{{< relurl "/overview/faq/#what-is-neurodesk" >}}">
-								<div class="card-body">
-										<i class=" fas fa-question-circle"></i>
-									<h4>FAQ</h4>
-									<p class="card-summary">Frequently Asked Questions</p>
-								</div>
-							</a>
-						</div>
-					</div>
-					<div class="col-6 col-md-5 col-lg-6 col-xl-3">
-						<div class="card community-card">
-							<a target="_blank" href="https://github.com/orgs/neurodesk/discussions">
-								<div class="card-body">
-									<i class="fa fa-envelope"></i>
-									<h4>Discussions</h4>
-									<p class="card-summary">Ask questions, suggest new features or raise any issues you
-										have (Github account required)</p>
-								</div>
-							</a>
-						</div>
-					</div>
-					<div class="col-6 col-md-5 col-lg-6 col-xl-3">
-						<div class="card community-card">
-							<a href="{{< relurl "/developers/contributors" >}}">
-								<div class="card-body">
-									<i class="fa fa-users"></i>
-									<h4>Contributors</h4>
-									<p class="card-summary">Contributors</p>
-								</div>
-							</a>
-						</div>
-					</div>
-					<div class="col-6 col-md-5 col-lg-6 col-xl-3">
-						<div class="card community-card">
-							<a href="{{< relurl "/overview/contribute" >}}">
-								<div class="card-body">
-									<i class="fa fa-code"></i>
-									<h4>Contribution Guide</h4>
-									<p class="card-summary">Learn how you can contribute to Neurodesk code and
-										documentation</p>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+## Launch Neurodesk Play
+The tool below automatically detects the fastest server for your location. Click the **Recommended** card to start.
+
+<!-- Play Server latency widget -->
+<div id="server-latency-widget" style="margin: 20px 0; padding: 25px; border: 1px solid #e1e4e8; border-radius: 8px; background: #fafbfc; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; text-align: center;">
+
+<style>
+    .ping-container { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 20px; }
+    
+    .ping-card {
+        background: white; padding: 15px; border-radius: 8px; 
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12); width: 180px;
+        border: 2px solid transparent; transition: all 0.2s ease-in-out;
+        text-decoration: none !important; color: inherit !important; display: block;
+        cursor: pointer; position: relative; text-align: center;
+    }
+    
+    .ping-card:hover { transform: translateY(-2px); box-shadow: 0 8px 16px rgba(0,0,0,0.1); }
+    .ping-winner { border-color: #28a745; background-color: #f0fff4; transform: scale(1.05); }
+    
+    .ping-name { font-weight: 700; display: block; margin-bottom: 5px; font-size: 1.1em; color: #0366d6; }
+    .ping-time { font-size: 1.4em; font-weight: 700; margin: 8px 0; color: #24292e; }
+    .ping-req { font-size: 0.75em; color: #586069; background: #f6f8fa; padding: 2px 8px; border-radius: 10px; display: inline-block; border: 1px solid #e1e4e8;}
+    .ping-status { font-size: 0.85em; color: #586069; margin-top: 5px; display: block;}
+    
+    .ping-btn {
+        padding: 8px 16px; background-color: #fff; color: #24292e; 
+        border: 1px solid #d1d5da; border-radius: 6px; cursor: pointer; font-size: 0.9em; margin-top: 10px; transition: background 0.2s;
+    }
+    .ping-btn:hover { background-color: #f3f4f6; }
+</style>
+
+<div class="ping-container">
+    <!-- US Server --><a href="https://play-america.neurodesk.org" target="_blank" id="card-1" class="ping-card">
+        <span class="ping-name">🇺🇸 US</span>
+        <div class="ping-req">Login: GitHub</div>
+        <div id="ping-1" class="ping-time">-- ms</div>
+        <span id="status-1" class="ping-status">Waiting...</span>
+    </a><!-- EU Server --><a href="https://play-europe.neurodesk.org" target="_blank" id="card-2" class="ping-card">
+        <span class="ping-name">🇪🇺 Europe</span>
+        <div class="ping-req">Login: GitHub</div>
+        <div id="ping-2" class="ping-time">-- ms</div>
+        <span id="status-2" class="ping-status">Waiting...</span>
+    </a><!-- AU Server --><a href="https://play.neurodesk.cloud.edu.au" target="_blank" id="card-3" class="ping-card">
+        <span class="ping-name">🇦🇺 Australia</span>
+        <div class="ping-req">Login: AAF</div>
+        <div id="ping-3" class="ping-time">-- ms</div>
+        <span id="status-3" class="ping-status">Waiting...</span>
+    </a>
+</div>
+
+<button id="ping-btn" class="ping-btn" onclick="runPingTest()">Re-test Latency</button>
+
+<script>
+(function() {
+const servers = [
+{ id: 1, url: "https://play-america.neurodesk.org" },
+{ id: 2, url: "https://play-europe.neurodesk.org" },
+{ id: 3, url: "https://play.neurodesk.cloud.edu.au" }
+];
+
+window.runPingTest = async function() {
+const btn = document.getElementById('ping-btn');
+if(btn) { btn.disabled = true; btn.innerText = "Testing..."; }
+
+servers.forEach(s => {
+document.getElementById(`card-${s.id}`).classList.remove('ping-winner');
+document.getElementById(`ping-${s.id}`).innerText = "-- ms";
+document.getElementById(`status-${s.id}`).innerText = "Pinging...";
+});
+
+const check = async (url) => {
+const start = performance.now();
+try {
+await fetch(url, { mode: 'no-cors', cache: 'no-cache', method: 'HEAD' });
+return Math.round(performance.now() - start);
+} catch (e) { return -1; }
+};
+
+const results = await Promise.all(servers.map(s => check(s.url)));
+const finalData = servers.map((s, index) => ({ ...s, time: results[index] }));
+
+finalData.forEach(item => {
+const el = document.getElementById(`ping-${item.id}`);
+const status = document.getElementById(`status-${item.id}`);
+if (item.time === -1) {
+el.innerText = "Error"; el.style.color = "#d73a49"; status.innerText = "Unreachable";
+} else {
+el.innerText = item.time + " ms"; el.style.color = "#24292e"; status.innerText = "Online";
+}
+});
+
+const valid = finalData.filter(d => d.time !== -1);
+if (valid.length > 0) {
+valid.sort((a, b) => a.time - b.time);
+const winner = valid[0];
+document.getElementById(`card-${winner.id}`).classList.add('ping-winner');
+const winStatus = document.getElementById(`status-${winner.id}`);
+winStatus.innerText = "Recommended";
+winStatus.style.fontWeight = "bold"; winStatus.style.color = "#28a745";
+}
+if(btn) { btn.disabled = false; btn.innerText = "Re-test Latency"; }
+};
+runPingTest();
+})();
+</script>
+</div>
+<!-- Play Server latency widget -->
+
+## Data Transfer
+We provide several methods to transfer your files in and out of Neurodesk Play, including drag-and-drop and cloud storage integration. 
+[View Data Transfer Documentation &rarr;](/docs/neurodesktop/storage)
+
+## Usage Acknowledgments
+
+When using these services for research, please include the appropriate acknowledgment:
+
+**🇺🇸 US (Jetstream2 / NSF)**
+> "This research was supported by Jetstream2 (NSF award #2005506), which is supported by the National Science Foundation. Jetstream2 is a cloud computing resource managed by the Indiana University Pervasive Technology Institute and part of the ACCESS project."
+
+**🇪🇺 Europe (EGI / CESNET-MCC)**
+> "Enabled through services and resources provided by the EGI Federation with the dedicated support of CESNET-MCC. Computational resources were provided by the e-INFRA CZ project (ID:90254), supported by the Ministry of Education, Youth and Sports of the Czech Republic."
+
+**🇦🇺 Australia (ARDC / Nectar)**
+> "This research was supported by use of the Nectar Research Cloud, a collaborative Australian research platform supported by the NCRIS-funded Australian Research Data Commons (ARDC)."
+
+{{% /blocks/section %}}
