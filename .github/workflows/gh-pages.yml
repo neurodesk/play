@@ -75,6 +75,11 @@ jobs:
             hugo \
               --minify \
               --baseURL "https://neurodesk.github.io/"
+          elif [[ "${{ github.repository }}" == "neurodesk/play" ]]; then
+            echo "Building for domain: https://play.neurodesk.org/"
+            hugo \
+              --minify \
+              --baseURL "https://play.neurodesk.org/"
           else
             # Construct the base URL for forks
             BASE_URL="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
