@@ -242,7 +242,7 @@ enable = false
 [[menu.main]]
     name = "Learning Resources"
     weight = 30
-    url = "https://neurodesk.org/learning-resources/"
+    url = "https://neurodesk.org/edu/"
 [[menu.main]]
     name = "Developer Documentation"
     weight = 40
