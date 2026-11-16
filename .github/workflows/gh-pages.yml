@@ -3,199 +3,37 @@ name: github pages
 on:
   push:
     branches: ["main"]
-  repository_dispatch:
   workflow_dispatch:
-#  schedule: ## Run at 12.am daily to check for broken links automatically
- #   - cron: '0 0 * * *'
 
 permissions:
   contents: read
   pages: write
   id-token: write
-  pull-requests: write
 
 concurrency:
   group: "pages"
   cancel-in-progress: true
 
-defaults:
-  run:
-    shell: bash
-
 jobs:
   build:
     runs-on: ubuntu-22.04
-    env:
-      HUGO_VERSION: 0.146.0
     steps:
-      - name: Install Hugo CLI
-        run: |
-          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
-          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
-
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          submodules: recursive
-
-      - name: Set up Python 3.10
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
-
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install requests
-
       - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v2
-
-      - name: Install dependencies
-        run: | 
-          npm install
-
-      - name: Write applist.json
-        env:
-          ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
-        run: |
-          if [ -n "$ZENODO_TOKEN" ]; then
-            python .github/workflows/write-app-json.py --zenodo_token "$ZENODO_TOKEN"
-          else
-            echo "ZENODO_TOKEN not set — skipping write-app-json.py"
-          fi
-      - name: Build with Hugo
-        env:
-          HUGO_ENVIRONMENT: production
-          HUGO_ENV: production
-        run: |
-          if [[ "${{ github.repository }}" == "neurodesk/neurodesk.github.io" ]]; then
-            echo "Building for staging domain: https://neurodesk.github.io/"
-            hugo \
-              --minify \
-              --baseURL "https://neurodesk.github.io/"
-          elif [[ "${{ github.repository }}" == "neurodesk/play" ]]; then
-            echo "Building for domain: https://play.neurodesk.org/"
-            hugo \
-              --minify \
-              --baseURL "https://play.neurodesk.org/"
-          else
-            # Construct the base URL for forks
-            BASE_URL="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
-            echo "Building for fork/preview domain: ${BASE_URL}"
-            hugo \
-              --minify \
-              --baseURL "${BASE_URL}"
-          fi
-
-      - name: Verify assets in public
-        run: |
-          set -e
-          MISSING=0
-          
-          # Determine if we're on a fork (paths will be patched)
-          if [[ "${{ github.repository }}" != "neurodesk/neurodesk.github.io" ]]; then
-            REPO_PATH="${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
-            echo "Fork detected: will strip /${REPO_PATH}/ prefix when checking files"
-          fi
-          
-          # Find referenced /static/ paths in generated HTML/CSS/JS and ensure files exist
-          # Use while-read loop to handle filenames with spaces properly
-          while IFS= read -r p; do
-            # For forks, strip the repo path prefix to get the actual file location
-            if [[ "${{ github.repository }}" != "neurodesk/neurodesk.github.io" ]]; then
-              # Transform /<owner>.github.io/<repo>/static/... → /static/...
-              FILE_PATH="${p#/${REPO_PATH}}"
-              echo "DEBUG: Checking $p → ${FILE_PATH}"
-            else
-              FILE_PATH="${p}"
-            fi
-            
-            FILE="public${FILE_PATH}"
-            if [ ! -f "$FILE" ]; then
-              echo "Missing asset: $p -> expected $FILE"
-              MISSING=1
-            fi
-          done < <(grep -Rho 'src="\/[^"]*static\/[^"]*"' public/ | sed -E 's/.*src="(\/[^"]*)".*/\1/' | sort -u)
-          
-          if [ "$MISSING" -eq 1 ]; then
-            echo "One or more assets missing from public/ — failing the job"
-            exit 1
-          fi
-
-      
-      # Note: Do NOT copy the production CNAME during staging deploys.
-
-      - name: Merge PR previews into artifact (preserve pr-* directories)
-        run: |
-          set -e
-          # Check if gh-pages branch exists
-          if git ls-remote --exit-code --heads origin gh-pages >/dev/null 2>&1; then
-            echo "Found gh-pages branch, merging preview directories..."
-            
-            # Fetch gh-pages branch
-            git fetch origin gh-pages:refs/remotes/origin/gh-pages
-            
-            # Create temporary worktree for gh-pages
-            mkdir -p /tmp/gh-pages-checkout
-            git worktree add /tmp/gh-pages-checkout origin/gh-pages
-            
-            # Copy any pr-* directories into public/ (preserving previews)
-            if ls /tmp/gh-pages-checkout/pr-* 1> /dev/null 2>&1; then
-              echo "Copying preview directories to public/..."
-              cp -r /tmp/gh-pages-checkout/pr-* public/ || true
-              echo "Previews merged successfully"
-            else
-              echo "No preview directories found (no active PRs)"
-            fi
-            
-            # Clean up worktree
-            git worktree remove /tmp/gh-pages-checkout
-          else
-            echo "No gh-pages branch exists yet, skipping preview merge"
-          fi
-          
-      - name: Upload artifact
+        uses: actions/configure-pages@v5
+      - name: Upload redirect site
         uses: actions/upload-pages-artifact@v3.0.1
         with:
-          path: ./public
-
-  check-links:
-    runs-on: ubuntu-24.04
-    needs: build
-    steps:
-      - uses: actions/checkout@v4
-      - name: Run linkspector with reviewdog
-        uses: UmbrellaDocs/action-linkspector@v1.3.6  
-        with:
-          fail_on_error: true
-          reporter: github-pr-check
-          config_file: .linkspector.yml
-          filter_mode: nofilter
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          show_stats: true
-          level: error
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          path: ./redirect-site
 
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-22.04
-    needs: [build]
+    needs: build
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-      # - name: Algolia crawler creation and crawl
-      #   uses: algolia/algoliasearch-crawler-github-actions@v1.1.9
-      #   id: algolia_crawler
-      #   with: # mandatory parameters
-      #     crawler-user-id: ${{ secrets.CRAWLER_USER_ID }}
-      #     crawler-api-key: ${{ secrets.CRAWLER_API_KEY }}
-      #     algolia-app-id: ${{ secrets.ALGOLIA_APP_ID }}
-      #     algolia-api-key: ${{ secrets.ALGOLIA_API_KEY }}
-      #     site-url: 'https://neurodesk.org'
