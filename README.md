@@ -1,41 +1,21 @@
-_Information on the **Neurodesk** project is available at [neurodesk.org](https://neurodesk.org)_
+# Neurodesk Play redirect
 
-#### Cloning this repository
-Using SSH
-```
-git clone --recurse-submodules git@github.com:neurodesk/neurodesk.github.io.git
-```
-Using Https:
-```
-git clone --recurse-submodules https://github.com/neurodesk/neurodesk.github.io.git
-````
+This repository redirects https://play.neurodesk.org/ to
+https://neurodesk.org/getting-started/hosted/play/.
 
-#### Download hugo extended
-```
-https://github.com/gohugoio/hugo/releases
-```
+GitHub Pages deploys only `redirect-site/` on pushes to `main` or a manual
+run of `.github/workflows/gh-pages.yml`. No Hugo build, Node dependencies,
+or submodules are needed. The legacy Hugo sources are no longer deployed.
 
-### Forking this repository
+`index.html` redirects the home page; `404.html` redirects unknown paths.
+Both use an immediate HTML refresh, JavaScript `location.replace`, a canonical
+URL, and a visible fallback link. Keep their destination URLs in sync.
+These are browser redirects: the home page returns HTTP 200 and unknown paths
+return HTTP 404, rather than an HTTP 301 redirect.
 
-#### 1. Find BASEURL
+Keep the existing Route 53 records, GitHub Pages custom domain
+(`play.neurodesk.org`), and HTTPS setting unchanged. Pages must use
+**GitHub Actions** as its deployment source.
 
-The forked baseurl will usually be in the following format `https://<USERNAME>.github.io/neurodesk.github.io/`. 
-
-#### 2. Set page builder
-Go to [/settings/pages](../../settings/pages). Under **Build and deployment**, set **Source** as **Github Actions**
-
-Workflow map (quick)
---------------------
-1. Contributor (fork-based)
-   - Fork `neurodesk/neurodesk.github.io` → create a branch → open PR against staging `main`.
-2. PR checks & preview
-   - CI builds PR and publishes preview (Could take 3-5 minutes) at `https://neurodesk.github.io/pr-<PR_NUMBER>/`.
-   - Preview url will appear at comment section by a github-actions bot
-3. Merge to staging
-   - After review, merge PR into staging `main`.
-   - Check changes are present at neurodesk.github.io
-4. Promote to production
-   - Maintainer runs the **Promote to Prod** workflow in `neurodesk/neurodesk.github.io` → Actions or via tagging.
-   - Workflow builds site with production baseURL, writes `public/CNAME`, pushes to `neurodesk/neurodesk.org:site`, and triggers deploy.
-5. Production deploy
-   - `neurodesk/neurodesk.org` deploys from `site` branch.
+After deployment, open https://play.neurodesk.org/ and an unknown path such as
+https://play.neurodesk.org/old-link/ and confirm both reach the Play page.
